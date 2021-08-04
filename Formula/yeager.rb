@@ -8,7 +8,6 @@ class Yeager < Formula
   def install
     bin.install "yeager"
     pkgshare.install "geosite.dat"
-    pkgshare.install "geoip.dat"
   end
 
   plist_options manual: "yeager -config=#{HOMEBREW_PREFIX}/etc/yeager/config.json"
