@@ -10,7 +10,7 @@ class Yeager < Formula
     pkgshare.install "geosite.dat"
   end
 
-  plist_options manual: "yeager -config=#{HOMEBREW_PREFIX}/etc/yeager/config.json"
+  plist_options manual: "yeager serve --config #{HOMEBREW_PREFIX}/etc/yeager/config.json"
 
   def plist; <<~EOS
   <?xml version="1.0" encoding="UTF-8"?>
