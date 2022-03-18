@@ -29,8 +29,7 @@ class Yeager < Formula
       <key>ProgramArguments</key>
       <array>
         <string>#{bin}/yeager</string>
-        <string>serve</string>
-        <string>--config</string>
+        <string>-config</string>
         <string>#{etc}/yeager/config.json</string>
       </array>
       <key>StandardErrorPath</key>
