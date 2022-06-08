@@ -10,7 +10,7 @@ class Yeager < Formula
     pkgshare.install "geosite.dat"
   end
 
-  plist_options manual: "yeager -config #{HOMEBREW_PREFIX}/etc/yeager/config.json"
+  plist_options manual: "yeager -config #{HOMEBREW_PREFIX}/etc/yeager/config.yaml"
 
   def plist; <<~EOS
   <?xml version="1.0" encoding="UTF-8"?>
@@ -30,7 +30,7 @@ class Yeager < Formula
       <array>
         <string>#{bin}/yeager</string>
         <string>-config</string>
-        <string>#{etc}/yeager/config.json</string>
+        <string>#{etc}/yeager/config.yaml</string>
       </array>
       <key>StandardErrorPath</key>
       <string>/tmp/yeager.log</string>
