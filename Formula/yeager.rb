@@ -33,7 +33,7 @@ class Yeager < Formula
         <string>#{etc}/yeager/config.yaml</string>
       </array>
       <key>StandardErrorPath</key>
-      <string>/tmp/yeager.log</string>
+      <string>/usr/local/var/log/yeager.log</string>
     </dict>
   </plist>
   EOS
