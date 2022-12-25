@@ -1,9 +1,9 @@
 class Yeager < Formula
   desc "A proxy aims to bypass network restriction"
   homepage "https://github.com/chenen3/yeager"
-  url "https://github.com/chenen3/yeager/releases/download/v1.26.3/yeager-macos-amd64.tar.gz"
-  version "1.26.3"
-  sha256 "a9b7631e658bee052ef058cdff574246075b966baefd366256d432e0aaf0b5df"
+  url "https://github.com/chenen3/yeager/releases/download/v1.26.5/yeager-macos-amd64.tar.gz"
+  version "1.26.5"
+  sha256 "33bd0c8b2a6dac04f2cb8ae28d6d89259628ebd0aeef67daa00c8e1ab3bca44b"
 
   def install
     bin.install "yeager"
