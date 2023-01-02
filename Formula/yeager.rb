@@ -30,7 +30,7 @@ class Yeager < Formula
       <array>
         <string>#{bin}/yeager</string>
         <string>-config</string>
-        <string>#{etc}/yeager/config.yaml</string>
+        <string>#{etc}/yeager/config.json</string>
       </array>
       <key>StandardErrorPath</key>
       <string>/usr/local/var/log/yeager.log</string>
