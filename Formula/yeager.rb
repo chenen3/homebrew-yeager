@@ -10,33 +10,9 @@ class Yeager < Formula
     pkgshare.install "geosite.dat"
   end
 
-  plist_options manual: "yeager -config #{HOMEBREW_PREFIX}/etc/yeager/config.yaml"
-
-  def plist; <<~EOS
-  <?xml version="1.0" encoding="UTF-8"?>
-  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-  <plist version="1.0">
-    <dict>
-      <key>KeepAlive</key>
-      <dict>
-          <key>SuccessfulExit</key>
-          <false/>
-      </dict>
-      <key>RunAtLoad</key>
-      <true/>
-      <key>Label</key>
-      <string>#{plist_name}</string>
-      <key>ProgramArguments</key>
-      <array>
-        <string>#{bin}/yeager</string>
-        <string>-config</string>
-        <string>#{etc}/yeager/config.json</string>
-      </array>
-      <key>StandardErrorPath</key>
-      <string>/usr/local/var/log/yeager.log</string>
-    </dict>
-  </plist>
-  EOS
+  service do
+    run [bin/"yeager", "-config", etc/"yeager/config.json"]
+    keep_alive true
+    error_log_path "/usr/local/var/log/yeager.log"
   end
-
 end
