@@ -7,7 +7,6 @@ class Yeager < Formula
 
   def install
     bin.install "yeager"
-    pkgshare.install "geosite.dat"
   end
 
   service do
